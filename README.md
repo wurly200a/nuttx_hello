@@ -59,3 +59,7 @@ After the above, you can find nuttx.bin in build-nuttx-esp32/nuttx.
 ```
 > esptool.py --chip esp32 --port COM1 --baud 921600 write_flash 0x1000 bootloader-esp32.bin 0x8000 partition-table-esp32.bin 0x10000 nuttx.bin
 ```
+
+# Execution Result
+
+![execution.png](execution.png)
