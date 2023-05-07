@@ -6,7 +6,7 @@ else
 IMAGE_NAME=$1
 fi
 
-CMD="docker build . -t ${IMAGE_NAME} \
+CMD="docker build . -f $(cd $(dirname $0); pwd)/Dockerfile -t ${IMAGE_NAME} \
             --build-arg USER_NAME=$(id -u -n) \
             --build-arg USER_ID=$(id -u) \
             --build-arg GROUP_NAME=$(id -g -n) \

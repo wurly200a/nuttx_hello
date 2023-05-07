@@ -28,9 +28,7 @@ $ cd nuttx_hello
 Build docker image as a builder.
 
 ```
-$ cd build-nuttx-esp32
-$ ./01_build-builder.sh
-$ cd ..
+$ build-nuttx-esp32/01_build-builder.sh
 ```
 
 ## step2
