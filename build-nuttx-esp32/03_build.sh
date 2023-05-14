@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MY_APP_NAME=hello
-OS_BUILD_PREFIX=build-nuttx-esp32
+OS_BUILD_PREFIX=$(dirname $0)
 
 NUTTX_DIR=${OS_BUILD_PREFIX}/nuttx
 NUTTX_GIT_URL=https://github.com/apache/incubator-nuttx
