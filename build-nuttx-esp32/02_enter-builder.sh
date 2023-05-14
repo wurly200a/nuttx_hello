@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $(dirname $0) = . ]; then
+echo "This script should be run in one directory above."
+exit
+fi
+
 if [ "$#" != 1 ]; then
 IMAGE_NAME="nuttx_esp32_builder"
 else

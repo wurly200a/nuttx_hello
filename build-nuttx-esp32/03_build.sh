@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $(dirname $0) = . ]; then
+echo "This script should be run in one directory above."
+exit
+fi
+
 MY_APP_NAME=hello
 OS_BUILD_PREFIX=$(dirname $0)
 
