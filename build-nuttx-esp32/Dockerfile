@@ -2,6 +2,15 @@ FROM ubuntu:22.04
 
 ARG USER_NAME USER_ID GROUP_NAME GROUP_ID PASSWORD
 
+RUN if [ -z "${USER_NAME}"  ] || \
+       [ -z "${USER_ID}"    ] || \
+       [ -z "${GROUP_NAME}" ] || \
+       [ -z "${GROUP_ID}"   ] || \
+       [ -z "${PASSWORD}"   ];   \
+    then echo "Please specify args"; \
+    exit 1; \
+    fi
+
 # basic
 RUN apt update -y
 
